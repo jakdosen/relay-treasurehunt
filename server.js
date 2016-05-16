@@ -40,7 +40,7 @@ var app = new WebpackDevServer(compiler, {
   stats: {colors: true}
 });
 // Serve static resources
-app.use('/', express.static(path.resolve(__dirname, 'public')));
+app.use('/view', express.static(path.resolve(__dirname, 'public')));
 app.listen(APP_PORT, () => {
   console.log(`App is now running on http://localhost:${APP_PORT}`);
 });
